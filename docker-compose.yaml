@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+    dev:
+        image: docker-nvm
+        build: .
+        volumes:
+            - '.:/workspace'
+            - '/workspace/node_modules'
+        command: npx -y cowsay hello world
